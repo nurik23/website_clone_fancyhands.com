@@ -32,6 +32,120 @@ body{
 	margin-left:1000px;
 	font-size: 90%;
 }
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    
+    position: relative;
+}
+
+
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
 .SingUp{
 	font-family: sans-serif;
     font-size: 90%;
@@ -41,6 +155,94 @@ body{
 	border-radius: 5px;
     border: 2px solid white;
     padding:10px 20px; 
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {
+	width:50%}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #000;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
 }
 .section1div2{
 	border-color: red;
@@ -261,26 +463,22 @@ display:none;
 }
 .section3{
 	
-	height:600px;
-    width: 1281px;
-    background-color: white;	
+	height:80%;
+    width: 100%;
+    background-color: white;
+
 }
-.section3 div{
-	border-style: dashed;
-	height: 35%;
-	width: 23%;
+.section3 img{
+	padding-left: 50px;
 }
-.section3 .menu1, .menu2, .menu3, .menu4{
-	display: inline-block;
-}
-.section3 .menu5, .menu6, .menu7, .menu8{
-	display: inline-block;
-}
-.section3 i{
-	border-style: dashed;
-	color: #20C0DE;
-	font-size:5em;
-}
+.sec4 {display:none;
+	
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: row
+	
+	}
+
 
 .section4{
 	height:300px;
@@ -307,18 +505,11 @@ display:none;
 	margin-left:23%; 
 }	
 .section5{
-	height:580px;
-    width: 1280px;
-    background-color: blue;	
+    width: 100%;
+
 }
-.section5 div{
-	border-style: dashed;
-	height: 50%;
-	width: 80%;
-	margin-left:10%;
-	display: none;
-	
-}
+
+
 
 .section5 img{
 	margin-left: 45%;
@@ -329,7 +520,7 @@ display:none;
 	color: black;
 	line-height: 200%;
 	text-align: center;
-	border-style: dashed;
+	
 	height: 30%;
 	width: 70%;
 	margin-left: 15%;
@@ -348,8 +539,11 @@ display:none;
 }
 .section6{
 	height: 140px;
-	width: 100%
-	
+	width: 100%;
+	display:flex;
+	align-items: center;
+	justify-content:space-around;
+	background-color: #275380
 	}
 .section6 a{
 	
@@ -371,7 +565,8 @@ display:none;
 	width: 100%;
 }
 .section7 div{
-	
+	display: flex;
+	flex-direction: column;
 	height: 50%;
 	width: 20%;
 	margin: 2% 2% 0 2%;
@@ -381,6 +576,9 @@ display:none;
 	line-height: 32px;
 	color: #A8B6C0;
 	text-align: center;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: row;
 
 }
 .section7 img{
@@ -391,69 +589,13 @@ display:none;
 	background-color: #343539;
 	height: 400px;
 	width: 100%;
-}
-.section8 div{
-	display: inline-block;
-	border-style: dashed;
-	height: 60%;
-	width: 20%;
-	margin: 0 1%; 
-	
-
-	
-}
-.section8 a{
-	display: block;
-	text-decoration: none;
-	color: #A8B6C0;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: row;
 
 }
-.section8 h2{
-	color: white;
-}
-.section8table3 div{
-	border-style: dashed;
-	border-color: green;
-	display: block;
-	height: 30px;
-	width: 150px;
-}
-.section8table3 i{
-	display: inline-block;
-	font-size:2em;
 
-}
-.section8table3 a{
-	display: inline-block;
-	text-align: right;
-	height: 30px;
-	width: 130px;
-	margin-top: 0px;
-}
-.section8table4 div{
-	border-style: dashed;
-	border-color: gray;
-	width: 100%;
-	height: 40%;
-	
-	
-}
-.section8table4 img{
-	margin-top: 0;
-	height: 40px;
-	width: 40px;
-	display: inline-block;
-}
-
-.section8table4 pre{
-	border-style: dashed;
-	border-color: red;
-	width: 80%;
-	height: 40%;
-	display: inline-block;
-	text-align: center;
-	color: #A8B6C0;
-}
 .section9{
 	
 	background-color: #343539;
@@ -465,4 +607,72 @@ display:none;
 	color: #9ea2ad;
 	margin: 10px 8px 0 20px;
 	font-size: 12px;
+}
+.section8{
+	width: 100%;	
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0% 0;
+	color: #A8B6C0;
+	height: 100%;
+	border-bottom: 1px solid #fff;
+	overflow:hidden;
+}
+.section8 ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+}
+.flex-item{
+	display: flex;
+	flex-direction: column;
+	height: 300px;
+	width: 100%;
+	align-items: center;
+	padding: 5% 5%;
+
+	
+}
+.flex-heading{
+	width: 100%
+}
+.flex-list{
+	width: 100%
+}
+.flex-list .fa{
+	border: 1px solid #A8B6C0;
+	color: #A8B6C0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 25px;
+	width: 25px;
+	text-align: center;
+	margin-right: 10px
+}
+.flex-list ul li{
+	display: flex;
+}
+.flex-list ul li a{
+	color: #A8B6C0;
+}
+
+.flex-list ul li a:hover{
+	color: #fff;
+}
+a{
+	text-decoration: none;
+}
+.item{
+	display: flex;
+}
+.item img{
+	width: 50px;
+	height:50px;
+}
+.item span{
+	font-size: 12px
 }

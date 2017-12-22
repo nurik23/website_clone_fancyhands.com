@@ -5,23 +5,73 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="style.css">
-
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 	<script src="script.js"></script>
-
 </head>
 <body>
 	<section class="section1" >
 		<div class="section1div1">
 			<img class="Fancy-Hands-Logo" src="Fancy-Hands-Logo.png">
-			<button class="SingIn">Sing In</button>
-			<button class="SingUp">Sing Up</button>
+			<button class="SingIn" onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sing In</button>
+				<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+			<button class="SingUp" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sing Up</button>
+			<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="container">
+      <label><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <input type="checkbox" checked="checked"> Remember me
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn">Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+
 		</div>
 		<div class="section1div2">
 			<h1>We get things done.</h1>
 			<p>Fancy Hands is a team of <span>US-based assistants</span> at your fingertips. Use any device, at any time of day, and our assistants will tackle anything on your to-do list!</p>
-			
+
 			<button class="GetStart">Get started now!</button>
-			
+
 			<button class="LearnMore1Section1">Learn More</button>
 		</div>
 		<div class="section1div3">
@@ -39,9 +89,9 @@
 				<h1>Focus your efforton more important thinks while we handke the rest.</h1>
 				<h4>Time Consuming Research</h4>
 			</div>
-			
+
 			<div class="Section2Person1div2">
-			<img src="Av-6.png" alt="Avatar">
+				<img src="Av-6.png" alt="Avatar">
 				<p>Please send me five kid-friendly gluten-free recipes I can make for dinner this week (with a separate ingredient list). Thanks!</p>
 				<i class="fa fa-quote-left fa-3x" aria-hidden="true"></i>
 			</div>
@@ -67,208 +117,179 @@
 				<p>My cable bill just went up 30 dollars!Can you call them up and get thr bill back down?!</p>
 				<i class="fa fa-quote-left fa-3x" aria-hidden="true"></i>
 			</div>
-		</div>	
-			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			<a class="next" onclick="plusSlides(1)">&#10095;</a>
-		
+		</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
 		<div style="text-align:center">
-		   <span class="dot" onclick="currentSlide(1)"></span> 
-		   <span class="dot" onclick="currentSlide(2)"></span> 
-		   <span class="dot" onclick="currentSlide(3)"></span> 
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
 		</div>
 		<button class="SeeMore">See more requeste</button>
 	</section>
 	<section class="section3">
 		<h1>We've baked in plenty of features.</h1>
-		<div class="menu1">
-			<i class="fa fa-calendar-o" aria-hidden="true"></i>
-			<h3>Scheduling</h3>
-			<p>Don't worry about the back and forth.We can mack plans and manage your calendar.</p>
+			<div class="slider">
+		<div>
+			<img src="31.png">
 		</div>
-		<div class="menu2">
-			<i class="fa fa-mobile" aria-hidden="true"></i>
-			<h3>Text Messaging</h3>
-			<p>Have a quick request?Text it in to us and get it done ASAP.</p>
-		</div>
-		<div class="menu3">
-			<i class="fa fa-money " aria-hidden="true"></i>
-			<h3>Purchasing</h3>
-			<p>Not only can we research prodicts, we can purchase them for you too!</p>
-		</div>
-		<div class="menu4">
-			<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-			<h3>Rollover Requests</h3>
-			<p>Unused requests from previous months rollover and accumulate as long as you're a member.</p>
-		</div>
-		<div class="menu5">
-			<i class="fa fa-refresh" aria-hidden="true"></i>
-			<h3>Recurring Requests</h3>
-			<p>you can set reuquested reuquests to repeat so you can set it and forget it.</p>
-		</div>
-		<div class="menu6">
-			<i class="fa fa-commenting" aria-hidden="true"></i>
-			<h3>Accessibity</h3>
-			<p>You can submit reuests by phone, web, text, email or through our android and iphones apps.</p>
-		</div>
-		<div class="menu7">
-			<i class="fa fa-users" aria-hidden="true"></i>
-			<h3>Referral Credite</h3>
-			<p>Invite friends and family to join Fancy Hands and get free credits for eveny signup.</p>
-		</div>
-		<div class="menu8">
-			<i class="fa fa-bar-chart" aria-hidden="true"></i>
-			<h3>Usage Stats</h3>
-			<p>Like data? See how much time and effort you've saved by having us work for you.</p>
-		</div>
-	</section>
-	<section class="section4">
-		<h1>We've got business features too.</h1>
-		<p>We've built loads of special features for businesses too. Bulk payment plans, conference calling, an API, app integrations and more.</p>
-		<button class="LearnMore2Section4">Learn More</button>
-	</section>
-	<section class="section5">
-		<div class="section5Person1">
-			<img src="1.png" alt="Avatar">
-			<h1>Fancy Hands allows me to hand off tasks like scheduling, calling, and research so I can focus on what's most important. As an entrepreneur, I swear by Fancy Hands. It's the best personal assistant service</h1>
-			<h2>Alexis Ohani</h2>
-			<h5>Founder of Reddit, Hipmunk, Breadpig</h5>
-			<i class="fa fa-quote-left" aria-hidden="true"></i>
-		</div>
-		<div class="section5Person2">
-			<img src="2.png" alt="Avatar">
-			<h1>Fancy Hands has been a great way for me to not only train myself on delegating, but it has also saved me a ton of time making phone calls, booking appointments, and doing research.</h1>
-			<h2>David Kadavy</h2>
-			<h5>Designer / Author</h5>
-			<i class="fa fa-quote-left" aria-hidden="true"></i>
-		</div>
-		<div class="section5Person3">
-			<img src="3.png" alt="Avatar">
-			<h1>Fancy Hands allows me to hand off tasks like scheduling, calling, and research so I can focus on what's most important. As an entrepreneur, I swear by Fancy Hands. It's the best personal assistant service.</h1>
-			<h2>Alexis Ohanian</h2>
-			<h5>Founder of Reddit, Hipmunk, Breadpig</h5>
-			<i class="fa fa-quote-left" aria-hidden="true"></i>
-		</div>
-		<div class="section5Person4">
-			<img src="4.png" alt="Avatar">
-			<h1>I'm Fancy Hands' biggest fan. As a business owner and single mom, there's no time for appointment scheduling, research, or other home-related tasks. Before Fancy Hands, stuff just didn't get done -- even important doctor checkups. Now I use it almost daily and it saves me hours.</h1>
-			<h2>Amander Steinberg</h2>
-			<h5>Founder of DailyWorth</h5>
-			<i class="fa fa-quote-left" aria-hidden="true"></i>
-		</div>
-		<div class="section5Person5">
-			<img src="5.png" alt="Avatar">
-			<h1>Fancy Hands has fundamentally changed the way I think about getting things done. In other words, they really changed my way of life.</h1>
-			<h2>Gabriel Weinberg</h2>
-			<h5>Entrepreneur / CEO & Founde, DuckDuckGo</h5>
-			<i class="fa fa-quote-left" aria-hidden="true"></i>
-		</div>
-	</section>
-	<section class="section6">
-		<a class="section6Link1" href="">The New York Times</a>
-		<a class="section6Link2" href="">TIME</a>
-		<a class="section6Link3" href="">lifehacker</a>
-		<a class="section6Link4" href="">Forbs</a>
-		<a class="section6Link5" href="">Slate</a>
-	</section>
-	<section class="section7">
-		<div class="section7Person1">
-			<img src="11.jpeg" alt="Avatar">
-			<p class="section7text1">If you want your business to grow, you have to let go!Hire people who will help you get more done faster!  @fiverr @TaskRabbit </p>
+		<div>
+			<img src="32.png">
 			
 		</div>
-		<div class="section7Person2">
-			<img src="12.jpeg" alt="Avatar">
-			<p class="section7text1">@AkvileDeFazio Get a @FancyHands account. Have them call the client's A/P department and ask when the invoice will… https://t.co/8RVZpASQrX </p>
-			
-		</div>
-		<div class="section7Person3">
-			<img src="13.jpg" alt="Avatar">
-			<p class="section7text1">Just use FH #lifehack to call a business that never picks up within the first 10 tries https://t.co/v9Wsx6UDoy </p>
-			<p class="section7text2">i_standford</p>
-		</div>
-		<div class="section7Person4">
-			<img src="14.jpg" alt="Avatar">
-			<p class="section7text1">Fancy Hands comes through again. Awesome service.@FancyHands</p>
-			<p class="section7text2">RJAlexanderLae</p>
-		</div>
-		<button class="MoreTweets" style="color: #A8B6C0;">More Tweets</button>
-	</section>
-	<section class="section8">
-		<div class="section8table1">
-			<h2>Company</h2>
-			
-				<a class="section8AboutUs" href="">About Us</a>
-				<a class="section8Blog" href="">Blog</a>
-				<a class="section8Features" href="">Features</a>
-				<a class="section8Jobs" href="">Jobs</a>
-				<a class="section8Press" href="">Press</a>
-				<a class="section8Videos" href="">Videos</a>
-				<a class="section8Gifts" href="">Gifts</a>
-				<a class="section8Developers" href="">Developers</a>
+			</div>
 
-		</div>
-		<div class="section8table2">
-			<h2>Questions</h2>
-			
-				<a class="section8Howdoesit" href="">How does it</a>
-				<a class="section8wokr" href="">Work?</a>
-				<a class="section8Common" href="">Common</a>
-				<a class="section8Requsts" href="">Requsts</a>
-				<a class="section8FAQ" href="">FAQ</a>
-				<a class="section8ContactUs" href="">Contact Us</a>
-			
-		</div>
-		<div class="section8table3">
-			<h2>Follow Us</h2>
-			
-				<div class="section8Facebook">
-					<i class="fa fa-facebook-square" aria-hidden="true"></i>
-					<a class="section8" href="">Facebook</a>
-				</div>
-				<div class="section8Twitter">
-					<i class="fa fa-twitter-square" aria-hidden="true"></i>
-					<a class="section8" href="">Twitter</a>
-				</div>
-				<div class="section8Tumblr">
-					<i class="fa fa-tumblr-square" aria-hidden="true"></i>
-					<a class="section8" href="">Tumblr</a>
-				</div>
-				<div class="section8Pinterest">
-					<i class="fa fa-pinterest-square" aria-hidden="true"></i>
-					<a class="section8" href="">Pinterest</a>
-				</div>
-				<div class="section8Instagram">
-					<i class="fa fa-instagram" aria-hidden="true"></i>
-					<a class="section8" href="">Instagram</a>
-				</div>
-				<div class="section8Google+">
-					<i class="fa fa-google-plus-square" aria-hidden="true"></i>
-					<a class="section8" href="">Google +</a>
-				</div>
-			
-		</div>
-		<div class="section8table4">
-			<div class="section8USA">
-				<img class="section8table4icon1" src="americanFlag.png">
-				<pre>
-					<p>created & staffed</p>
-					<p>IN THE USA</p>
-				</pre>
+
+				</section>
+				<section class="section4">
+					<h1>We've got business features too.</h1>
+					<p>We've built loads of special features for businesses too. Bulk payment plans, conference calling, an API, app integrations and more.</p>
+					<button class="LearnMore2Section4">Learn More</button>
+				</section>
+				<section class="section5">
+					<div class="slider">
+						<div>
+							<img src="1.png" alt="Avatar">
+							<h1>Fancy Hands allows me to hand off tasks like scheduling, calling, and research so I can focus on what's most important. As an entrepreneur, I swear by Fancy Hands. It's the best personal assistant service</h1>
+							<h2>Alexis Ohani</h2>
+							<h5>Founder of Reddit, Hipmunk, Breadpig</h5>
+							<i class="fa fa-quote-left" aria-hidden="true"></i>
+						</div>
+						<div>
+							<img src="2.png" alt="Avatar">
+							<h1>Fancy Hands has been a great way for me to not only train myself on delegating, but it has also saved me a ton of time making phone calls, booking appointments, and doing research.</h1>
+							<h2>David Kadavy</h2>
+							<h5>Designer / Author</h5>
+							<i class="fa fa-quote-left" aria-hidden="true"></i>	
+						</div>
+						<div>
+							<img src="3.png" alt="Avatar">
+							<h1>Fancy Hands allows me to hand off tasks like scheduling, calling, and research so I can focus on what's most important. As an entrepreneur, I swear by Fancy Hands. It's the best personal assistant service.</h1>
+							<h2>Alexis Ohanian</h2>
+							<h5>Founder of Reddit, Hipmunk, Breadpig</h5>
+							<i class="fa fa-quote-left" aria-hidden="true"></i>
+						</div>
+						<div>
+							<img src="4.png" alt="Avatar">
+							<h1>I'm Fancy Hands' biggest fan. As a business owner and single mom, there's no time for appointment scheduling, research, or other home-related tasks. Before Fancy Hands, stuff just didn't get done -- even important doctor checkups. Now I use it almost daily and it saves me hours.</h1>
+							<h2>Amander Steinberg</h2>
+							<h5>Founder of DailyWorth</h5>
+							<i class="fa fa-quote-left" aria-hidden="true"></i>
+						</div>
+						<div>
+							<img src="5.png" alt="Avatar">
+							<h1>Fancy Hands has fundamentally changed the way I think about getting things done. In other words, they really changed my way of life.</h1>
+							<h2>Gabriel Weinberg</h2>
+							<h5>Entrepreneur / CEO & Founde, DuckDuckGo</h5>
+							<i class="fa fa-quote-left" aria-hidden="true"></i>
+						</div>
+
+					</div>
+				</section>
+		<section class="section6">
+			<a class="section6Link1" href="">The New York Times</a>
+			<a class="section6Link2" href="">TIME</a>
+			<a class="section6Link3" href="">lifehacker</a>
+			<a class="section6Link4" href="">Forbs</a>
+			<a class="section6Link5" href="">Slate</a>
+		</section>
+		<section class="section7">
+			<div class="section7Person1">
+				<img src="11.jpeg" alt="Avatar">
+				<p class="section7text1">If you want your business to grow, you have to let go!Hire people who will help you get more done faster!  @fiverr @TaskRabbit </p>
+				
 			</div>
-			<div class="section8NYC">
-				<img class="section8table4icon2" src="NYicon.jpg">
-				<pre>
-					<p>MADE IN NYC</p>
-					<p>AVAILABLE EVERYWHERE</p>
-				</pre>
+			<div class="section7Person2">
+				<img src="12.jpeg" alt="Avatar">
+				<p class="section7text1">@AkvileDeFazio Get a @FancyHands account. Have them call the client's A/P department and ask when the invoice will… https://t.co/8RVZpASQrX </p>
+				
 			</div>
-		</div>	
-	</section>
-	<hr>
-	<section class="section9">
-		<p>Privacy Policy</p>
-		<p>Terms of Use</p>
-		<p>Fancy Hands Inc. ® 2010 - 2017</p>
-	</section>
-</body>
-</html>
+			<div class="section7Person3">
+				<img src="13.jpg" alt="Avatar">
+				<p class="section7text1">Just use FH #lifehack to call a business that never picks up within the first 10 tries</p>
+				<p class="section7text2">i_standford</p>
+			</div>
+			<div class="section7Person4">
+				<img src="14.jpg" alt="Avatar">
+				<p class="section7text1">Fancy Hands comes through again. Awesome service.@FancyHands</p>
+				<p class="section7text2">RJAlexanderLae</p>
+			</div>
+			<button class="MoreTweets" style="color: #A8B6C0;">More Tweets</button>
+		</section>
+		<section class="section8">
+			<div class="flex-item">
+				<div class="flex-heading">
+					<span>COMPANY</span>
+				</div>
+				<div class="flex-list">
+					<ul>
+						<li><a href="#">About US</a></li>
+						<li><a href="#">Blog</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Jobs</a></li>
+						<li><a href="#">Press</a></li>
+						<li><a href="#">Videos</a></li>
+						<li><a href="#">Gifts</a></li>
+						<li><a href="#">Developers</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="flex-item">
+				<div class="flex-heading">
+					<span>QUESTIONS</span>
+				</div>
+				<div class="flex-list">
+					<ul>
+						<li><a href="#">How does it work?</a></li>
+						<li><a href="#">Common Requests</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Contact Us</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="flex-item">
+				<div class="flex-heading">
+					<span>FOLLOW US</span>
+				</div>
+				<div class="flex-list">
+					<ul>
+						<li>
+							<i class="fa fa-facebook"></i>
+							<a href="#">Facebook</a></li>
+							<li>
+								<i class="fa fa-twitter"></i><a href="#">Twitter</a></li>
+								<li><i class="fa fa-tumblr"></i><a href="#">Tumblr</a></li>
+								<li><i class="fa fa-pinterest"></i><a href="#">Pinterest</a></li>
+								<li><i class="fa fa-instagram"></i><a href="#">Instagram</a></li>
+								<li><i class="fa fa-google-plus"></i><a href="#">Google +</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="flex-item">
+						<div class="item">
+							<img src="americanFlag.png">
+							<span>CREATED & STAFFED
+							IN THE USA</span>
+						</div>
+					</div>
+					<div class="flex-item">
+						<div class="item">
+							<img src="NYicon.jpg">
+							<span>MADE IN NYC AVALABLE EVERYWHERE</span>
+						</div>
+					</section>
+
+					<section class="section9">
+						<p>Privacy Policy</p>
+						<p>Terms of Use</p>
+						<p>Fancy Hands Inc. ® 2010 - 2017</p>
+					</section>
+					<script>
+						$(document).ready(function(){
+							$('.slider').bxSlider();
+						});
+					</script>
+				</body>
+				</html>
